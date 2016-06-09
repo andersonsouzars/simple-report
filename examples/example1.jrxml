@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 5.0.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" uuid="92237541-3a61-4e67-8165-eef67d56bbf9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="localhost - extreme"/>
+	<queryString language="SQL">
+		<![CDATA[select * from orcamentos]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="created_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="updated_at" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="338" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="10" width="554" height="30" backcolor="#F2F2F2" uuid="1e9b0efa-a9fd-40ea-a67c-5bf15fe56f55"/>
+				<box>
+					<topPen lineWidth="2.1" lineStyle="Solid" lineColor="#26FF00"/>
+					<leftPen lineWidth="2.1" lineStyle="Solid" lineColor="#26FF00"/>
+					<bottomPen lineWidth="2.1" lineStyle="Solid" lineColor="#26FF00"/>
+					<rightPen lineWidth="2.1" lineStyle="Solid" lineColor="#26FF00"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Notice how simple it is to use the SimpleReport]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="80" width="110" height="50" backcolor="#FF0400" uuid="4e9027d0-b97f-453e-b112-028e3c5e13d0"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="130" y="80" width="425" height="50" backcolor="#FF9D00" uuid="27c4d658-c9c5-42bc-a69c-1ac40e787e31"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="-1" y="60" width="111" height="13" uuid="b0cecc97-72eb-4ab7-9863-474fe66fb558"/>
+				<text><![CDATA[Rectangle ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="60" width="425" height="13" uuid="9eb98fd9-02fb-4789-b597-9cdf1e5d0995"/>
+				<text><![CDATA[rectangle with border]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="151" width="554" height="30" backcolor="#FFFBAB" uuid="bef461b8-bb2b-48f8-a85f-d6b15fa5c43b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[centralized static text vertically and horizontally]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="200" width="50" height="50" uuid="05d304fd-6af0-4911-ab75-f75e55adab82"/>
+				<imageExpression><![CDATA["C:/wamp/www/simplereport/examples/php-icon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="10" y="270" width="50" height="50" uuid="3aa1f851-943f-4b42-af43-be8b167cfe2e"/>
+				<imageExpression><![CDATA["http://megaicons.net/static/img/icons_title/8/178/title/programming-file-types-php-icon.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="70" y="200" width="484" height="50" uuid="42886f32-5ee6-43a8-8f02-dd217190eb21"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Image 1 - Workspace resource (C:/.../examples/php-icon.png)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="270" width="484" height="50" uuid="a13f31f9-c72b-453b-9e64-6a0134b171a0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Image 2 - URL (http://megaicons.net/static/img/icons_title/8/178/title/programming-file-types-php-icon.png)]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>
