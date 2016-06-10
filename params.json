@@ -1,6 +1,6 @@
 {
   "name": "Simple Report",
-  "tagline": "Framework em php para criação de relatórios",
-  "body": "SimpleReport é um framework escrito em PHP que nos permite gerar relatórios em PDF de forma muito simples, fácil e rápida.\r\n\r\n## Como funciona?\r\n\r\n* Você cria o layout do relatório utilizando **Jaspersoft® Studio** ou **iReport Designer**.\r\n* Você pega o arquivo gerado e utiliza dentro do Simple Report.\r\n\r\n**Pronto!**\r\n\r\n## Exemplo\r\n\r\n`require_once 'simpleReport/Report.php';`\r\n\r\n`Report::from('seuTemplate.jrxml')->outPut();`",
+  "tagline": "Framework em PHP para criação de relatórios em PDF.",
+  "body": "SimpleReport é um framework escrito em PHP que nos permite gerar relatórios em PDF de forma muito simples, fácil e rápida.\r\n\r\n\r\n## Como funciona?\r\n\r\n* Você cria o layout do relatório utilizando **Jaspersoft® Studio** ou **iReport Designer**.\r\n* Você utiliza o arquivo do layout no Simple Report.\r\n\r\n**Pronto!**\r\n\r\n\r\n## Exemplo\r\n\r\n`require_once 'simpleReport/Report.php';`\r\n\r\n`Report::from('seuTemplate.jrxml')->outPut();`",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
