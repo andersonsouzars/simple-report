@@ -38,6 +38,14 @@ class SRFillManager{
 		if($numP >1)
 			$this->dados = func_get_arg(1);
 
+		if($this->dados === null && $this->report->queryText !== null){
+			
+			$con = new PDO(SR_DB_CONNECTION.":host=".SR_DB_HOST.";dbname=".SR_DB_DATABASE, SR_DB_USERNAME, SR_DB_PASSWORD);
+			$rs = $con->query($this->report->queryText);
+			$this->dados = SRDataSource::getInstance('SRPDO', $rs);
+			
+		}
+		
 		$this->sizePage = $this->report->heigth;
 		$this->pdf = new FPDF('p', 'pt', 'A4');
 		$this->pdf->SetAutoPageBreak(false);

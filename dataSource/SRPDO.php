@@ -17,28 +17,20 @@ Licença Pública Geral GNU para maiores detalhes.
 Você encontrará uma cópia da Licença Pública Geral GNU no diretório
 license/COPYING.txt, se não, entre em <http://www.gnu.org/licenses/>
 */
-require_once dirname(__FILE__).'/SRInstanceManager.php';
+require_once dirname(__FILE__).'/../core/ISRIterator.php';
 
-abstract class SRCompileManager{
-
-	/**
-	 * @param SimpleDesign
-	 * @return SimpleReport
-	 */
-	public static function compile(SimpleDesign $sd, $sourceFileName){
-		
-		$serializedFile = serialize($sd);
-		
-		$serializedFile = explode(':', $serializedFile, 4);
-		$serializedFile[2] = '"SimpleReport"';
-		$serializedFile = implode(':', $serializedFile);
-		
-		if(SR_COMPILE === true)
-			file_put_contents($sourceFileName.'.sr', $serializedFile);
-		
-		return SRInstanceManager::getInstance($serializedFile);
-	}  
+class SRPDO implements ISRIterator{
 	
-} 
+	var $result;
+
+	function __construct($result){
+		$this->result = $result;
+	}
+
+	function next(){
+		return $this->result->fetch(PDO::FETCH_ASSOC);
+	}
+	
+}
 
 ?>
