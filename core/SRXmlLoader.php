@@ -70,7 +70,6 @@ class SRXmlLoader{
 	public function load($sourceFileName){
 
 		$xml = simplexml_load_file($sourceFileName);
-
 		
 		$this->sd = new SimpleDesign();
 		$this->sd->name = (String)$xml['name'];
@@ -85,6 +84,8 @@ class SRXmlLoader{
 			
 			switch ($elementName){
 				
+				case 'queryString':
+					$this->sd->queryText = (String)$element; 
 				case 'parameter':
 					if(isset($element->defaultValueExpression))
 						SRParameter::set((String)$element['name'], (String)$element->defaultValueExpression);

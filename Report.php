@@ -34,9 +34,7 @@ final class Report{
 	public function __construct($sourceFileName, $dados = null){
 		$fileName = substr($sourceFileName, 0, -6);
 		
-		
-		
-		if(file_exists($fileName.'.sr') && SW_COMPILE === true){
+		if(file_exists($fileName.'.sr') && SR_COMPILE === true){
 			$this->report = SRInstanceManager::getInstance(file_get_contents($fileName.'.sr'));
 		}else{
 			$load = new SRXmlLoader();
